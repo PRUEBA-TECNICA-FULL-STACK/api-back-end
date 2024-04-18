@@ -6,14 +6,14 @@ use Illuminate\Support\Facades\Route;
 require __DIR__.'/auth.php';
 
 Route::middleware('auth:api')->group(function () {
-    Route::get('/user', [UserController::class, 'show'])
+    Route::get('v1/user', [UserController::class, 'show'])
         ->name('user.show');
 });
 
 Route::middleware(['auth:api', 'verified'])->group(function () {
-    Route::patch('/user', [UserController::class, 'update'])
+    Route::patch('v1/user', [UserController::class, 'update'])
         ->name('user.update');
 
-    Route::patch('/user/change-password', [UserController::class, 'changePassword'])
+    Route::patch('v1/user/change-password', [UserController::class, 'changePassword'])
         ->name('user.change-password');
 });
