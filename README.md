@@ -4,14 +4,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 This repository contains a Laravel 10 with JWT authentication boilerplate
-using the [tymon/jwt-auth](https://github.com/tymondesigns/jwt-auth) package, inspired by
-the [Laravel Breeze](https://github.com/laravel/breeze) package (API stack).
+using the [tymon/jwt-auth] package, inspired by
+the [Laravel Breeze] package (API stack).
 
 ## Next.js frontend
 
 We created a dedicated frontend using [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/)
-and [NextAuth](https://next-auth.js.org/). You can find the
-repository [here](https://github.com/avocado-media/nextjs-jwt-app-router).
+and [NextAuth](https://next-auth.js.org/). 
 
 ## Features
 
@@ -30,11 +29,13 @@ repository [here](https://github.com/avocado-media/nextjs-jwt-app-router).
 2. `composer install`
 3. `php artisan jwt:secret` (generate a secret key that will be used to sign your tokens)
 4. `php artisan migrate:fresh --seed`
+5. `php artisan migrate`
 
 ## User authentication
 
 In order to list all the users in the database, you can run `php artisan user:list`. By default, a user with the 
 'developer@example.com' email will be seeded. 
+'1234' is password 
 
 In order to authenticate, you have to log in using valid credentials. User data and an access token will be returned.
 You can use this access token to do subsequent requests to the API.
@@ -51,25 +52,18 @@ Telescope dashboard at the `/telescope` URL (prefixed with your local URL).
 
 ## Larastan
 
-This project uses [Larastan](https://github.com/larastan/larastan/commit/37f9ce80890a67a02b1d55bf79eb73604880c6b9). You 
+This project uses [Larastan]. You 
 can run the static analysis using `./vendor/bin/phpstan analyse`. Important note: a resource class requires a `@mixin`
 annotation so that PHPStan knows what model the resource is using.
 
 ## Husky
 
-This project uses [Husky](https://typicode.github.io/husky/) to run Larastan, Pint and Pest before pushing to the
+This project uses [Husky] to run Larastan, Pint and Pest before pushing to the
 repository.
 
 ## Testing
 
-This boilerplate comes with [Pest](https://pestphp.com/) as its testing framework. In order to run the tests,
+This boilerplate comes with [Pest] as its testing framework. In order to run the tests,
 run `./vendor/bin/pest`.
 
-## Contributing
 
-Feel free to open a pull request if you want to contribute to this project. All contributions / suggestions are
-welcome ✨
-
-## License
-
-This project is open-sourced software licensed under the MIT license.
