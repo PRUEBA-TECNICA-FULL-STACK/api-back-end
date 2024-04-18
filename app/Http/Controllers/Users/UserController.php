@@ -15,6 +15,7 @@ class UserController extends Controller
 {
     public function show(): UserResource
     {
+        
         return new UserResource(Auth::user());
     }
 
